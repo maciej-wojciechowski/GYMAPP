@@ -343,9 +343,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
@@ -582,12 +582,17 @@ a {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    overflow-x: scroll;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .container {
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-x: scroll;
   }
 }
 /*# sourceMappingURL=style-history.css.map */
