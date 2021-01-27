@@ -465,6 +465,8 @@ a {
 }
 
 .entry {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0.5rem 0rem;
   color: white;
   display: -webkit-box;

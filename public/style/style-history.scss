@@ -108,8 +108,10 @@ a {
   pointer-events: all;
 }
 
-//FROM new-training EDIT STUFF
+//EDIT TRAINING
+
 .entry {
+  flex-wrap: wrap;
   margin: 0.5rem 0rem;
   color: white;
   @include flex(center, center);
