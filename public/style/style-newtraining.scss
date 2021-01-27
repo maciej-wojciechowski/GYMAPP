@@ -125,12 +125,21 @@ main {
 
 @media screen and (max-width: 500px) {
   .container {
-    margin-top: 10vh;
+    padding-top: 2rem;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    justify-content: end;
   }
   .save-container {
     flex-direction: column;
+  }
+  .entry {
+    flex-direction: column;
+
+    .add-set-btn,
+    .trash-btn {
+      padding: 0.2rem;
+    }
   }
 }

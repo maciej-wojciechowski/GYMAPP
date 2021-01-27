@@ -102,6 +102,14 @@ header {
       }
     }
   }
+  #user-name {
+    font-size: 2rem;
+  }
+
+  #logout-btn {
+    padding: 0 1rem;
+    border: 1px solid white;
+  }
 
   #user-container {
     margin: 0 5%;
@@ -109,15 +117,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    #user-name {
-      font-size: 2rem;
-    }
-
-    #logout-btn {
-      padding: 0 1rem;
-      border: 1px solid white;
-    }
   }
 
   #title {
@@ -174,7 +173,7 @@ header {
         right: 0px;
         height: 85vh;
         top: 15vh;
-        background-color: #002124;
+        background-color: #002124e7;
         flex-direction: column;
         width: 30%;
         transform: translateX(100%);
@@ -191,9 +190,19 @@ header {
   html {
     font-size: 75%;
   }
-  header #title {
-    padding: 0.2rem;
-    font-size: 1.2rem;
+
+  header {
+    #title {
+      padding: 0.2rem;
+      font-size: 1.2rem;
+    }
+
+    #user-name {
+      font-size: 1.5rem;
+    }
+    #logout-btn {
+      font-size: 0.8rem;
+    }
   }
 }
 

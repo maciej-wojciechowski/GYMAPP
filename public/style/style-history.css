@@ -128,6 +128,15 @@ header nav ul li a {
   color: white;
 }
 
+header #user-name {
+  font-size: 2rem;
+}
+
+header #logout-btn {
+  padding: 0 1rem;
+  border: 1px solid white;
+}
+
 header #user-container {
   margin: 0 5%;
   display: -webkit-box;
@@ -143,15 +152,6 @@ header #user-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header #user-container #user-name {
-  font-size: 2rem;
-}
-
-header #user-container #logout-btn {
-  padding: 0 1rem;
-  border: 1px solid white;
 }
 
 header #title {
@@ -208,7 +208,7 @@ header .nav-active {
     right: 0px;
     height: 85vh;
     top: 15vh;
-    background-color: #002124;
+    background-color: #002124e7;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -231,6 +231,12 @@ header .nav-active {
   header #title {
     padding: 0.2rem;
     font-size: 1.2rem;
+  }
+  header #user-name {
+    font-size: 1.5rem;
+  }
+  header #logout-btn {
+    font-size: 0.8rem;
   }
 }
 
@@ -412,10 +418,12 @@ a {
 
 .edit-container .edit-popup {
   border: 2px solid white;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   position: relative;
   background: #002124;
-  min-width: 90%;
+  border-radius: 5px;
+  width: 90%;
+  height: 80vh;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,8 +431,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -446,7 +455,8 @@ a {
 
 .edit-container .edit-popup .save-btn,
 .edit-container .edit-popup .delete-btn {
-  width: 5rem;
+  width: 7rem;
+  margin: 0.2rem;
 }
 
 .edit-container.active {
@@ -593,6 +603,21 @@ a {
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+  .edit-container .edit-popup {
+    overflow-y: scroll;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .entry {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .entry button {
+    padding: 0.2rem;
   }
 }
 /*# sourceMappingURL=style-history.css.map */
