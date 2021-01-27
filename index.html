@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style-index.css" />
+    <title>GYMAPP - Welcome!</title>
+  </head>
+  <body>
+    <header>
+      <div id="user-container">
+        <span id="user-name">Please LOGIN</span>
+        <button id="logout-btn" class="btn">LOGOUT</button>
+      </div>
+      <div id="title">
+        <h1>
+          GYMAPP
+        </h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./newtraining.html">New Training</a>
+          </li>
+          <li>
+            <a href="./stats.html">Stats</a>
+          </li>
+          <li>
+            <a href="./history.html">History</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="text-div">
+          <h3>
+            Welcome to
+            <span>GYMAPP</span>
+            !
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A facere
+            reprehenderit autem! Sunt unde labore cum quod, temporibus officiis
+            culpa. Sapiente, labore, sunt accusantium quis odit maxime aut sint
+            enim id fugiat nulla obcaecati.
+          </p>
+        </div>
+        <div class="btn-div">
+          <button id="login-popup-btn" class="btn">LOGIN</button>
+          <button id="signup-popup-btn" class="btn">SIGNUP</button>
+        </div>
+      </div>
+    </main>
+  
+
+    <div class="login-container">
+      <div class="login-popup">
+        <form id="login-form">
+          <button class="close-btn btn">X</button>
+          <h3>LOGIN</h3>
+          <label for="login-email">Email</label>
+          <br />
+          <input type="email" id="login-email" class="form-control" required />
+          <br />
+          <label for="login-password">Password</label>
+          <br />
+          <input
+            type="password"
+            id="login-password"
+            class="form-control"
+            required
+          />
+          <br />
+          <button type="submit" class="btn submit-btn">LET'S GO!</button>
+          <div class="container-error" id="loginError"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="signup-container">
+      <div class="signup-popup">
+        <form id="signup-form">
+          <button class="close-btn btn">X</button>
+          <h3>SIGNUP</h3>
+          <label for="name">Name</label>
+          <br />
+          <input type="text" id="signup-name" class="form-control" required />
+          <br />
+          <label for="signup-email">Email</label>
+          <br />
+          <input type="email" id="signup-email" class="form-control" required />
+          <br />
+          <label for="signup-password">Password</label>
+          <br />
+          <input
+            type="password"
+            id="signup-password"
+            class="form-control"
+            required
+          />
+          <br />
+          <button type="submit" class="btn submit-btn">SINGUP !</button>
+          <div class="container-error" id="loginError"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyD-wx9rdAjBzBkh68tSa6xTG9XBIsvIZ_I',
+        authDomain: 'gymapp-da554.firebaseapp.com',
+        projectId: 'gymapp-da554',
+        storageBucket: 'gymapp-da554.appspot.com',
+        messagingSenderId: '934728880047',
+        appId: '1:934728880047:web:4002b93bf4505d80f2695a',
+      }
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig)
+
+      const auth = firebase.auth()
+      const db = firebase.firestore()
+    </script>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

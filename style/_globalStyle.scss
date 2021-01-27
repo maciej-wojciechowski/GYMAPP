@@ -1,0 +1,223 @@
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//variables
+$blue: #006aff;
+$blue2: #69a2f3;
+$backgroundOpa: rgba(0, 0, 0, 0.75);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("../pics/pexels-victor-freitas-703014.jpg");
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 2rem;
+  color: white;
+}
+
+p {
+  font-size: 1.3rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+label {
+  color: white;
+}
+
+.container {
+  @include flex(center, center);
+  padding: 3rem;
+  background: $backgroundOpa;
+  backdrop-filter: blur(0.5rem);
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.btn {
+  border: none;
+  background: $blue;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 2px;
+
+  &:hover {
+    background: $blue2;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+}
+
+/* Header */
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  @include flex(center, space-between);
+  height: 15vh;
+  border-bottom: 2px solid white;
+  color: white;
+  background: $backgroundOpa;
+  backdrop-filter: blur(0.5rem);
+
+  nav {
+    transition: 0.5s ease;
+    z-index: 10;
+    margin-right: 5%;
+    ul {
+      z-index: 10;
+      list-style: none;
+      @include flex(center, center);
+      li {
+        padding: 0 3rem;
+        text-align: center;
+        :hover {
+          text-decoration: underline;
+        }
+        a {
+          font-size: 1.3rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  #user-container {
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #user-name {
+      font-size: 2rem;
+    }
+
+    #logout-btn {
+      padding: 0 1rem;
+      border: 1px solid white;
+    }
+  }
+
+  #title {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.5rem;
+    background: $blue;
+    border-radius: 5px;
+    border: solid 2px white;
+  }
+
+  /* Burger */
+  .burger {
+    display: none;
+    cursor: pointer;
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .nav-active {
+    transform: translate(0%);
+  }
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1100px) {
+  header nav ul li {
+    padding: 0 1rem;
+  }
+  header nav {
+    margin: 3%;
+  }
+  #user-container {
+    margin: 3%;
+  }
+}
+@media screen and (max-width: 900px) {
+  header {
+    .burger {
+      display: block;
+    }
+    nav {
+      ul {
+        z-index: 10;
+        justify-content: space-around;
+        position: absolute;
+        right: 0px;
+        height: 85vh;
+        top: 15vh;
+        background-color: #002124;
+        flex-direction: column;
+        width: 30%;
+        transform: translateX(100%);
+        transition: all 0.5s ease;
+      }
+      li {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 75%;
+  }
+  header #title {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Burger animations */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(0px, 11px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(0px, -11px);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

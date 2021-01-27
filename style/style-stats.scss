@@ -1,0 +1,55 @@
+@import "./globalStyle";
+
+main {
+  position: relative;
+  top: 15vh;
+  height: 85vh;
+  @include flex(center, center);
+}
+
+i {
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  padding: 2rem 1rem;
+  width: 95%;
+  height: 50vw;
+  max-height: 90%;
+  @include flex(center, space-evenly);
+  flex-direction: column;
+}
+
+.select {
+  margin: auto;
+  display: flex;
+  select {
+    height: 100%;
+    margin: 0;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  button {
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+.chart-container {
+  position: relative;
+  width: 90%;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    top: 15vh;
+    height: 100vh;
+  }
+  .container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+  }
+}

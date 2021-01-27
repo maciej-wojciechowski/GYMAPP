@@ -1,0 +1,112 @@
+@import "./globalStyle";
+
+main {
+  top: 15vh;
+  position: relative;
+  z-index: 1;
+  height: 85vh;
+  @include flex(center, center);
+}
+
+.container {
+  width: 60%;
+  div {
+    margin: 0 1rem;
+  }
+
+  .text-div {
+    flex: 3;
+    @include flex(center, center);
+    flex-direction: column;
+  }
+  .btn-div {
+    flex: 1;
+    @include flex(none, space-evenly);
+    flex-direction: column;
+    .btn {
+      font-size: 2em;
+    }
+  }
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  span {
+    background: $blue;
+    border-radius: 3px;
+    padding: 0.3rem;
+  }
+}
+
+//login/signup
+#login-popup-btn,
+#signup-popup-btn {
+  margin: 1rem 0;
+}
+
+.login-container,
+.signup-container {
+  @include flex(center, center);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background: $backgroundOpa;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9;
+  backdrop-filter: blur(0.5rem);
+}
+
+.login-popup,
+.signup-popup {
+  opacity: 0;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  border: 2px solid white;
+  position: relative;
+  background: #002124;
+  flex-direction: column;
+  h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  input {
+    height: 1.5rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+}
+
+.login-container.active,
+.signup-container.active {
+  opacity: 1;
+  pointer-events: all;
+  .login-popup,
+  .signup-popup {
+    opacity: 1;
+  }
+}
+
+.submit-btn {
+  margin: auto;
+  @include flex(center, center);
+}
+
+/* Media queries */
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+  }
+}
