@@ -174,10 +174,11 @@ function addDelete(e) {
     );
   }
   if (target.classList.contains("trash-btn")) {
-    updateSelectDelete(entry);
-    entry.remove();
+    updateSelectDelete(entry.parentElement);
+    entry.parentElement.remove();
   }
   if (target.classList.contains("delete-set-btn")) {
+    console.log("elo");
     entry.remove();
   }
 }
