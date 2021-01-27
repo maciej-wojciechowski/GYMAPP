@@ -125,6 +125,8 @@ main {
 
 @media screen and (max-width: 500px) {
   .container {
+    border: none;
+    border-radius: none;
     padding-top: 2rem;
     width: 100%;
     height: 100%;

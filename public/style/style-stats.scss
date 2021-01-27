@@ -12,17 +12,17 @@ i {
 }
 
 .container {
+  max-height: 90%;
   position: relative;
   padding: 2rem 1rem;
   width: 95%;
   height: 50vw;
-  max-height: 90%;
-  @include flex(center, space-evenly);
+  @include flex(center, center);
   flex-direction: column;
 }
 
 .select {
-  margin: auto;
+  margin: 2rem 0rem;
   display: flex;
   select {
     height: 100%;
@@ -37,12 +37,17 @@ i {
 }
 
 .chart-container {
-  position: relative;
-  width: 90%;
+  // position: relative;
+  width: 95%;
 }
 
 @media screen and (max-width: 500px) {
   .container {
+    border: none;
+    border-radius: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0.2rem;
   }

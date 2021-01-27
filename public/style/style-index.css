@@ -450,6 +450,9 @@ main {
 
 @media screen and (max-width: 500px) {
   .container {
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -301,20 +301,20 @@ i {
 }
 
 .container {
+  max-height: 90%;
   position: relative;
   padding: 2rem 1rem;
   width: 95%;
   height: 50vw;
-  max-height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -322,7 +322,7 @@ i {
 }
 
 .select {
-  margin: auto;
+  margin: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,12 +341,16 @@ i {
 }
 
 .chart-container {
-  position: relative;
-  width: 90%;
+  width: 95%;
 }
 
 @media screen and (max-width: 500px) {
   .container {
+    border: none;
+    border-radius: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0.2rem;
   }
