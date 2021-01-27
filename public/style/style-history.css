@@ -602,6 +602,8 @@ a {
 
 @media screen and (max-width: 500px) {
   .container {
+    border: none;
+    border-radius: 0;
     margin: 0;
     width: 100%;
     height: 100%;
