@@ -490,6 +490,9 @@ a {
 }
 
 .entry li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-right: 1rem;
 }
 
@@ -502,24 +505,8 @@ a {
   border-radius: 3px;
 }
 
-.entry .delete-set-btn {
-  border: none;
-}
-
 .set {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  border: 2px solid #006aff;
-  padding: 0.2rem;
-  border-radius: 3px;
-}
-
-.set .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,6 +516,21 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 2px solid #006aff;
+  padding: 0.2rem;
+  border-radius: 3px;
+}
+
+.set .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -538,11 +540,21 @@ a {
 }
 
 .set .input-container label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .delete-set-btn {
-  font-size: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  font-size: 0.6rem;
   position: absolute;
   right: -4%;
   top: -3%;
@@ -622,6 +634,9 @@ a {
   }
   .entry button {
     padding: 0.2rem;
+  }
+  .entry .set {
+    margin: 0.2rem 0;
   }
 }
 /*# sourceMappingURL=style-history.css.map */

@@ -518,5 +518,8 @@ main {
   .entry .trash-btn {
     padding: 0.2rem;
   }
+  .entry .set {
+    margin: 0.2rem 0;
+  }
 }
 /*# sourceMappingURL=style-newtraining.css.map */

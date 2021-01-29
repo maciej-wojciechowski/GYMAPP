@@ -123,6 +123,7 @@ a {
     content: counter(exer) ".";
   }
   li {
+    align-self: center;
     margin-right: 1rem;
   }
   input {
@@ -133,30 +134,28 @@ a {
     padding: 0.3rem;
     border-radius: 3px;
   }
-  .delete-set-btn {
-    border: none;
-  }
 }
 
 .set {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
+  @include flex(center, center);
   border: 2px solid $blue;
   padding: 0.2rem;
   border-radius: 3px;
   .input-container {
-    @include flex(center, center);
+    @include flex(flex-start, flex-start);
     flex-direction: column;
     font-size: 1.5rem;
     margin-right: 0.5rem;
     label {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 }
 .delete-set-btn {
-  font-size: 0.5rem;
+  @include flex(center, center);
+  border: none;
+  font-size: 0.6rem;
   position: absolute;
   right: -4%;
   top: -3%;
@@ -214,6 +213,9 @@ a {
 
     button {
       padding: 0.2rem;
+    }
+    .set {
+      margin: 0.2rem 0;
     }
   }
 }

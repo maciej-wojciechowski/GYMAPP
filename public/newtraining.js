@@ -95,7 +95,7 @@ function addDelete(e) {
   }
   if (target.classList.contains("trash-btn")) {
     entry.parentElement.remove();
-    updateSelectDelete(entry);
+    updateSelectDelete(entry.parentElement);
   }
   if (target.classList.contains("delete-set-btn")) {
     entry.remove();

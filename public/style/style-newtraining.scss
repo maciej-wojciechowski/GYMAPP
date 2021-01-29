@@ -138,10 +138,12 @@ main {
   }
   .entry {
     flex-direction: column;
-
     .add-set-btn,
     .trash-btn {
       padding: 0.2rem;
+    }
+    .set {
+      margin: 0.2rem 0;
     }
   }
 }
