@@ -133,6 +133,7 @@ header #user-name {
   text-align: center;
   font-size: 1.5rem;
   margin: 0.5rem auto;
+  line-height: 75%;
 }
 
 header #logout-btn {
