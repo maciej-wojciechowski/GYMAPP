@@ -12,4 +12,8 @@ Techstack:
 -FIREBASE
 -CHART JS
 
+LIVE: 
+
+https://gymapp-da554.web.app/
+
 This is my first project, hope you like it. 
