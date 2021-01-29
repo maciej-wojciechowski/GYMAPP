@@ -50,10 +50,10 @@ function createSet() {
   weightContainer.classList.add("input-container");
   //WEIGHT INPUT
   const weightInput = document.createElement("input");
-  weightInput.setAttribute("type", "text");
   weightInput.setAttribute("value", "0");
   weightInput.setAttribute("name", "weight");
   weightInput.setAttribute("maxlength", "3");
+  weightInput.setAttribute("onkeypress", "validate(event)");
   weightInput.classList.add("weight");
   weightContainer.appendChild(weightInput);
   //WEIGHT LABEL
@@ -141,7 +141,8 @@ function save(e) {
             console.log(doc.data());
             db.collection("trainings")
               .doc(user.uid)
-              .update({ [id]: trainingObj });
+              .update({ [id]: trainingObj })
+              .then(alert("Training Added!"));
           } else {
             trainings[id] = trainingObj;
             db.collection("trainings")
@@ -177,23 +178,6 @@ function uuidv4() {
   );
 }
 
-// function getTrainings() {
-//     auth.onAuthStateChanged(user => {
-//         if (user) {
-//             db.collection('trainings').doc(user.uid).get().then(doc => {
-//                 if(doc.exists){
-//                     trainings = doc.data();
-//                 }else {
-//                     alert('You dont have any trainings yet! Please add by "New Training"');
-//                 }
-//             })
-//         }else{
-//             alert("You're not logged!")
-//         }
-//     })
-// }
-
-// getTrainings();
 checkIfLogged();
 navSlide();
 logout();
