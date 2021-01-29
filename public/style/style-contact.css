@@ -284,13 +284,10 @@ header .nav-active {
   }
 }
 
-i {
-  pointer-events: none;
-}
-
 main {
   top: 15vh;
   position: relative;
+  z-index: 1;
   height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,17 +301,8 @@ main {
 }
 
 .container {
-  padding: 1rem 0.5rem;
-  color: black;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 95%;
-  height: 90%;
-}
-
-.training-container {
+  color: white;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,47 +312,20 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  counter-reset: entry;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.training-container li {
+.container a {
   color: white;
 }
 
-.training-list {
-  list-style: none;
-}
-
-.input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-.input-container label {
-  font-size: 1rem;
-}
-
-.entry {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 1rem 0rem;
+.container li {
+  font-size: large;
+  font-weight: bold;
+  margin: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,155 +335,36 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.entry button {
-  margin: 0.2rem;
+.container li span {
+  font-weight: normal;
+  padding-right: 0.5rem;
 }
 
-.entry li::before {
-  counter-increment: entry;
-  content: counter(entry) ".";
+.container li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.entry li {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-right: 1rem;
-}
-
-.entry input {
-  border: none;
-  width: 2rem;
-  font-size: 1rem;
-  padding: 0.1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 3px;
-}
-
-.entry label {
-  font-size: 0.8rem;
-}
-
-.entry .set {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 2px solid #006aff;
-  padding: 0.2rem;
-  border-radius: 3px;
-}
-
-.entry .delete-set-btn {
-  font-size: 0.6rem;
-  position: absolute;
-  right: -4%;
-  top: -3%;
-  margin: 0;
-  padding: 0;
-  height: 0.7rem;
-  width: 0.7rem;
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: none;
-}
-
-.select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.select select {
-  font-size: 1.4rem;
-  padding: 0.5rem;
-}
-
-.select button {
-  width: 4rem;
-  font-size: 1.5rem;
-}
-
-.save-container {
-  justify-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.pick-date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem;
-  padding: 0;
-}
-
-.pick-date input {
-  padding: 0.5rem;
-}
-
-.pick-date button {
-  font-size: 1.5rem;
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .container {
-    border: none;
-    border-radius: none;
-    padding-top: 2rem;
+    padding: 2rem 0.5rem;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
   }
-  .save-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .entry {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .entry .add-set-btn,
-  .entry .trash-btn {
-    padding: 0.2rem;
-  }
-  .entry .set {
-    margin: 0.2rem 0;
+  .container li {
+    font-size: 1.2rem;
   }
 }
-/*# sourceMappingURL=style-newtraining.css.map */
+/*# sourceMappingURL=style-contact.css.map */

@@ -129,7 +129,10 @@ header nav ul li a {
 }
 
 header #user-name {
-  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5rem auto;
 }
 
 header #logout-btn {
@@ -142,16 +145,16 @@ header #user-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header #title {
