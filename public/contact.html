@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style-contact.css" />
+    <title>GYMAPP - Welcome!</title>
+  </head>
+  <body>
+    <header>
+      <div id="user-container">
+        <span id="user-name">Please Login</span>
+        <button id="logout-btn" class="btn">LOGOUT</button>
+      </div>
+      <div id="title">
+        <h1>
+          GYMAPP
+        </h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./newtraining.html">New Training</a>
+          </li>
+          <li>
+            <a href="./stats.html">Stats</a>
+          </li>
+          <li>
+            <a href="./history.html">History</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>CONTACT</h2>
+        <ul>
+     <li>
+        
+       <span> EMAIL : </span> maciekwoj4@gmail.com
+    </li>
+     <li>
+        <a href="https://github.com/mcgvoi/">GITHUB</a>
+    </li>
+    </ul>
+    
+        </div>
+    </main>
+  
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyD-wx9rdAjBzBkh68tSa6xTG9XBIsvIZ_I',
+        authDomain: 'gymapp-da554.firebaseapp.com',
+        projectId: 'gymapp-da554',
+        storageBucket: 'gymapp-da554.appspot.com',
+        messagingSenderId: '934728880047',
+        appId: '1:934728880047:web:4002b93bf4505d80f2695a',
+      }
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig)
+
+      const auth = firebase.auth()
+      const db = firebase.firestore()
+    </script>
+
+    <script type="module" src="./contact.js"></script>
+  </body>
+</html>
