@@ -14,6 +14,6 @@ Techstack:
 
 LIVE: 
 
-https://gymapp-da554.web.app/
+https://gymapp-da554.firebaseapp.com/
 
 This is my first project, hope you like it. 
