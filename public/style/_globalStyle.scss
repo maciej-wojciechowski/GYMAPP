@@ -90,13 +90,13 @@ header {
       list-style: none;
       @include flex(center, center);
       li {
-        padding: 0 3rem;
+        padding: 0 2rem;
         text-align: center;
         :hover {
           text-decoration: underline;
         }
         a {
-          font-size: 1.3rem;
+          font-size: 1rem;
           color: white;
         }
       }
@@ -153,7 +153,10 @@ header {
 
 @media screen and (max-width: 1100px) {
   header nav ul li {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    a {
+      font-size: 1rem;
+    }
   }
   header nav {
     margin: 3%;
