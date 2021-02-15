@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   color: white;
 }
+.table-container {
+  position: relative;
+}
 
 .container {
   position: relative;
@@ -23,12 +26,11 @@ a {
   padding: 1rem;
   width: 95%;
   height: 90%;
-  @include flex(center, space-around);
+  @include flex(center, center);
   flex-direction: column;
   h3 {
     font-weight: normal;
-    margin: 3rem 0 1rem;
-    flex: 1;
+    margin: 2rem 0;
     padding: 0.5rem;
   }
 }

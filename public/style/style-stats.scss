@@ -14,15 +14,15 @@ i {
 .container {
   max-height: 90%;
   position: relative;
-  padding: 2rem 1rem;
-  width: 95%;
+  padding: 1rem 1rem;
+  width: 80%;
   height: 50vw;
-  @include flex(center, center);
+  @include flex(center, flex-end);
   flex-direction: column;
 }
 
 .select {
-  margin: 2rem 0rem;
+  margin-top: 3rem;
   display: flex;
   select {
     height: 100%;
@@ -37,11 +37,12 @@ i {
 }
 
 .chart-container {
-  width: 95%;
+  width: 80%;
 }
 
 @media screen and (max-width: 500px) {
   .container {
+    justify-content: center;
     border: none;
     border-radius: none;
     max-height: none;
